@@ -1,30 +1,34 @@
 object CharacterCommon {
     fun attack(character: Character) {
+        with(character){
         when(character) {
             is Character.Archer -> {
-            println("${character.name} ${character.ability} применил способность ${character.weaponType.weapon}")
+            println("$name ${character.ability} применил способность ${weaponType.weapon}")
             }
             is Character.Mage -> {
-                println("${character.name} ${character.spell} применил колдовство ${character.weaponType.weapon}")
+                println("$name ${character.spell} применил колдовство ${weaponType.weapon}")
             }
             is Character.Warrior -> {
-                println("${character.name} ${character.ability} применил способность ${character.weaponType.weapon}")
+                println("$name ${character.ability} применил способность ${weaponType.weapon}")
             }
+        }
         }
     }
     fun defend(character: Character) {
+        with(character){
         when (character) {
             is Character.Archer -> {
-                println("${character.name} ${character.ability} использовала способность Скорости ")
+                println("$name ${character.ability} использовала способность Скорости ")
             }
 
             is Character.Mage -> {
-                println("${character.name} ${character.spell} колдовство Тёмного посоха")
+                println("$name ${character.spell} колдовство Тёмного посоха")
             }
 
             is Character.Warrior -> {
-                println("${character.name} ${character.ability} использовал способность Азгарда")
+                println("$name ${character.ability} использовал способность Азгарда")
             }
+        }
         }
     }
 }
